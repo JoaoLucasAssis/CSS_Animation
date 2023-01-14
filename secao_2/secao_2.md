@@ -31,11 +31,28 @@ transform: translateZ(12px); /*movimenta 12px no eixo Z*/
 
 ```css
 transform: scale(2); /*dobra ambos os lados*/
-transform: scaleX(2);
-transform: scaleY(2);
-transform: scaleZ(2);
+transform: scaleX(2); /*dobra o tamanho na horizontal*/
+transform: scaleY(2); /*dobra o tamanho na vertical*/
+transform: scaleZ(2); /*dobra o tamanho do eixo Z*/
 ```
 
 ## Rotate 
 
 `rotate` rotaciona um elemento das direções do seu eixo
+
+```css
+transform: rotate(30deg);  /*rotaciona 30 graus no sentido horario*/ 
+transform: rotateX(-30deg);  /*rotaciona 30 graus no sentido anti-horario*/ 
+transform: rotateY(30deg);  /*rotaciona 30 graus no eixo Y*/ 
+transform: rotateZ(30deg);  /*rotaciona 30 graus no eixo Z*/ 
+```
+
+## Skew 
+
+`skew` distorce um elemento no plano 2D
+
+```css
+transform: skew(20px 12%); /*distorce 20px na horizontal e 20% na vertical*/
+transform: skewX(20px); /*distorce 20px na horizontal*/
+transform: skewY(12%); /*distorce 20% na vertical*/
+```
