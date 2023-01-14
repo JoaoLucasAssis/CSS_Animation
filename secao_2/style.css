@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    width: 90%;
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.box {
+    user-select: none;
+    width: 200px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background-color: cadetblue;
+    transition: all 1s;
+}
+.box.origin:hover {
+    transform: rotate(-15deg);
+    transform-origin: bottom right;
+}
+.box.translate:hover {
+    transform: translateY(-45px);
+}
+.box.rotate:hover {
+    transform: rotate(-15deg);
+}
+.box.scale:hover {
+    transform: scale(1.2);
+}
+.box.skew:hover {
+    transform: skew(15deg);
+}
