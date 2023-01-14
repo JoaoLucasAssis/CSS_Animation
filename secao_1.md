@@ -39,5 +39,16 @@ transition-timing-function: ease; /*valor padrão*/
 transition-timing-function: ease-in; /*começa devagar e termina rápido*/
 transition-timing-function: ease-out; /*começa rápido e termina devagar*/
 transition-timing-function: ease-in-out; /*começa devagar, acelera e termina devagar*/
-transition-timing-function: linear;
+transition-timing-function: linear; /*mantém o mesmo valor*/
+```
+
+## Transition-delay
+
+`transition-delay` define um delay para a transição de uma propriedade
+
+Pode-se definir apenas um valor para todas as propriedades ou valores diferentes para diversas propriedades
+
+```css
+transition-delay: 250ms; /*mesmo valor*/
+transition-delay: 250ms, 1s; /*valores diferentes*/
 ```
