@@ -22,19 +22,20 @@ body {
 div {
     width: 150px;
     height: 100px;
-    color: cadetblue;
-    background-color: white;
-    border: 1px solid cadetblue;
+    color: white;
+    background-color: cadetblue;
+    border: 1px solid white;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition-property: background-color, border-radius, transform;
-    transition-duration: 1s, 4s, 7s;
+    transition-property: background-color, border, border-radius, transform;
+    transition-duration: 1s, 1s, 4s, 7s;
     transition-delay: 1s;
 }
 div:hover {
-    color: white;
-    background-color: cadetblue;
+    color: cadetblue;
+    background-color: white;
+    border: 1px solid cadetblue;
     border-radius: 50px;
     transform: translate(300px, 0);
 }
