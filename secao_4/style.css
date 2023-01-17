@@ -1,0 +1,495 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 1rem;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.container {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+button {
+    text-transform: uppercase;
+    text-align: center;
+    width: 160px;
+    height: 60px;
+    padding: 20px 40px;
+    background: none;
+    position: relative;
+    color: darkslateblue;
+    border: 3px solid darkslateblue;
+    transition: all .5s;
+    overflow: hidden;
+    user-select: none;
+    cursor: pointer;
+}
+button::before, button::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: all .5s;
+    background-color: darkslateblue;
+    z-index: -1;
+}
+
+
+
+.btn-1:hover {
+    color: white;
+}
+.btn-1::before {
+    width: 100%;
+    height: 200%;
+    top: 0;
+    left: 0;
+    border-radius: 0 0 50% 50%;
+    transform: translateY(-100%);
+}
+.btn-1:hover::before {
+    transform: translateY(0);
+}
+.btn-1::after {
+    display: none;
+}
+
+
+
+.btn-2 {
+    color: transparent;
+    overflow: visible;
+}
+.btn-2::before, .btn-2::after {
+    content: "button";
+    color: white;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+.btn-2::before {
+    transform: translate(-100%) scale(0);
+    opacity: 0;
+}
+.btn-2::after {
+    color: darkslateblue;
+    background-color: white;
+}
+.btn-2:hover::before {
+    transform: translate(0) scale(1);
+    opacity: 1;
+}
+.btn-2:hover::after {
+    transform: translate(100%) scale(0);
+    opacity: 0;
+}
+
+
+
+.btn-3 {
+    color: white;
+    border: none;
+    overflow: visible;
+}
+.btn-3:hover {
+    color: black;
+}
+.btn-3::before {
+    top: -5px;
+    left: -5px;
+    background-color: rgba(71, 61, 139, 0.8);
+    transform-origin: top;
+}
+.btn-3::after {
+    top: 5px;
+    left: 5px;
+    background-color: rgba(71, 61, 139, 0.4);
+    transform-origin: bottom;
+}
+.btn-3:hover::before {
+    top: -10px;
+    left: 0;
+    transform: perspective(1000px) rotateX(75deg);
+}
+.btn-3:hover::after {
+    top: 10px;
+    left: 0;
+    transform: perspective(1000px) rotateX(-75deg);
+}
+
+
+
+.btn-4:hover {
+    color: white;
+}
+.btn-4::before, .btn-4::after,.btn-4 span::before,.btn-4 span::after {
+    content: "";
+    width: 25%;
+    height: 100%;
+    position: absolute;
+    transition: all .2s;
+    background-color: darkslateblue;
+    z-index: -1;
+}
+.btn-4::before {
+    top: 100%;
+    left: 0;
+}
+.btn-4:hover::before {
+    top: 0;
+    left: 0;
+}
+.btn-4::after {
+    top: -100%;
+    left: 25%;
+    transition-delay: .1s;
+}
+.btn-4:hover::after {
+    top: 0;
+    left: 25%;
+}
+.btn-4 span::before {
+    top: 100%;
+    right: 25%;
+    transition-delay: .2s;
+}
+.btn-4:hover span::before {
+    top: 0;
+    right: 25%;
+}
+.btn-4 span::after {
+    top: -100%;
+    right: 0;
+    transition-delay: .3s;
+}
+.btn-4:hover span::after {
+    top: 0;
+    right: 0;
+}
+
+
+.btn-5 {
+    border: none;
+    overflow: visible;
+}
+.btn-5::before {
+    width: 100%;
+    height: 150%;
+    top: -25%;
+    left: -2%;
+    background: transparent;
+    border-right: 3px solid rgba(71, 61, 139, 0.4);
+    border-left: 3px solid rgba(71, 61, 139, 0.8);
+}
+.btn-5::after {
+    width: 120%;
+    height: 100%;
+    top: -2%;
+    right: -10%;
+    background: transparent;
+    border-bottom: 3px solid rgba(71, 61, 139, 0.4);
+    border-top: 3px solid rgba(71, 61, 139, 0.8);
+}
+.btn-5:hover::before {
+    transform: rotateY(180deg);
+}
+.btn-5:hover::after {
+    transform: rotateX(180deg);
+}
+
+
+
+.btn-6 {
+    overflow: visible;
+}
+.btn-6:hover {
+    color: white;
+}
+.btn-6::before {
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+.btn-6::after {
+    display: none;
+}
+.btn-6 span {
+    color: transparent;
+    position: relative;
+}
+.btn-6 span::before {
+    content: 'B';
+    position: absolute;
+    transition: all .5s;
+    color: darkslateblue;
+}
+.btn-6:hover span::before {
+    transform: translateX(-25px) rotate(360deg);
+    color: white;
+    font-size: 3.5rem;
+    top: -35px;
+}
+.btn-6:hover::before {
+    transform: rotate(12deg);
+    opacity: 1;
+}
+
+
+
+.btn-7 {
+    border: none;
+}
+.btn-7::before {
+    height: 3px;
+    top: 0;
+    left: -100%;
+}
+.btn-7::after {
+    height: 3px;
+    bottom: 0;
+    right: -100%;
+}
+.btn-7:hover::before {
+    left: 0;
+}
+.btn-7:hover::after {
+    right: 0;
+}
+.btn-7 span::before, .btn-7 span::after {
+    content: "";
+    width: 3px;
+    height: 100%;
+    position: absolute;
+    transition: all .5s;
+    background-color: darkslateblue;
+    z-index: -1;
+}
+.btn-7 span::before {
+    top: -100%;
+    left: 0;
+}
+.btn-7 span::after {
+    bottom: -100%;
+    right: 0;
+}
+.btn-7:hover span::before {
+    top: 0;
+}
+.btn-7:hover span::after {
+    bottom: 0;
+}
+
+
+
+.btn-8 {
+    border: none;
+}
+.btn-8:hover {
+    color: white;
+}
+.btn-8::after {
+    width: 96%;
+    height: 91%;
+    top: 0;
+    left: 0;
+    background: transparent;
+    z-index: -2;
+    border: 3px solid darkslateblue;
+}
+.btn-8::before {
+    width: 8%;
+    height: 300%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    background-color: white;
+    z-index: -1;
+}
+.btn-8:hover::before {
+    width: 100%;
+    background-color: darkslateblue;
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
+
+
+
+button.rotate:hover{
+    color: white;
+}
+button.rotate::before {
+    top: 0;
+    left: 0;
+    transform: rotate(-90deg);
+    transform-origin: bottom right;
+}
+button.rotate::after {
+    display: none;
+}
+button.rotate:hover::before {
+    transform: rotate(0deg);
+}
+
+
+
+button.swipe:hover{
+    color: white;
+}
+button.swipe::before {
+    top: 0;
+    left: 0;
+    transform: translate(-100%);
+}
+button.swipe::after {
+    display: none;
+}
+button.swipe:hover::before {
+    transform: translate(0);
+}
+
+
+button.hover:hover{
+    color: white;
+}
+button.hover::before {
+    top: 0;
+    left: 0;
+    transform: rotateX(90deg);
+}
+button.hover::after {
+    top: 0;
+    left: 0;
+    transform: rotateY(90deg);
+}
+button.hover:hover::before {
+    transform: rotateX(0deg);
+}
+button.hover:hover::after {
+    transform: rotateY(0deg);
+}
+
+
+
+button.stretch::before, button.stretch::after {
+    display: none;
+}
+button.stretch:hover {
+    font-weight: bold;
+    letter-spacing: 3px;
+    border: 6px solid darkslateblue;
+}
+
+
+
+button.swipe-text::before {
+    content: 'button';
+    top: 0;
+    left: 0;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(-100%);
+}
+button.swipe-text::after {
+    display: none;
+}
+button.swipe-text:hover::before {
+    transform: translate(0);
+}
+
+
+button.glow:hover{
+    color: white;
+}
+button.glow::before {
+    top: 0;
+    left: 0;
+    background-color: rgb(200, 200, 200);
+    transform: translate(-100%) rotate(45deg);
+}
+button.glow::after {
+    display: none;
+}
+button.glow:hover {
+    background-color: darkslateblue;
+}
+button.glow:hover::before {
+    transform: translate(100%) rotate(45deg);
+}
+
+
+
+button.layer {
+    color: transparent;
+    background-color: darkslateblue;
+}
+button.layer::before {
+    top: 0;
+    left: 0;
+    content: 'button';
+    color: darkslateblue;
+    background-color: white;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button.layer::after {
+    top: 0;
+    left: 0;
+    content: 'button';
+    color: darkslateblue;
+    background-color: white;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-100%, 100%);
+}
+button.layer:hover::before {
+    transform: translate(100%, -100%);
+}
+button.layer:hover::after {
+    transform: translate(0, 0);
+}
+
+
+
+button.scale::before {
+    top: 0;
+    left: 0;
+    content: 'button';
+    color: white;
+    z-index: 1;
+    background-color: darkslateblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(5);
+    opacity: 0;
+}
+button.scale:hover::before {
+    transform: scale(1);
+    opacity: 1;
+}
+button.scale::after {
+    display: none;
+}
