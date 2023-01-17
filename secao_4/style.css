@@ -329,6 +329,69 @@ button::before, button::after {
 
 
 
+.btn-9 {
+    overflow: visible;
+    border: none;
+    color: white;
+}
+.btn-9::before {
+    width: 50%;
+    top: -5px;
+    left: -2%;
+    background-color: rgba(71, 61, 139, 0.8);
+    transform: skew(30deg);
+    transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.btn-9:hover::before {
+    transform: skew(0deg);
+    left: 50%;
+    top: 0;
+}
+.btn-9::after {
+    width: 50%;
+    bottom: -5px;
+    right: -2%;
+    background-color: rgba(71, 61, 139, 0.4);
+    transform: skew(30deg);
+    transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.btn-9:hover::after {
+    transform: skew(0deg);
+    right: 50%;
+    bottom: 0;
+}
+
+
+
+.btn-10 {
+    overflow: visible;
+    border-radius: 50px;
+}
+.btn-10::before {
+    top: 0;
+    left: 0;
+    border-radius: 50px;
+    background-color: white;
+    z-index: -1;
+}
+.btn-10:hover {
+    top: -5px;
+    box-shadow: 0 10px 20px rgba(71, 61, 139, 0.2);
+}
+.btn-10:active {
+    top: -3px;
+    box-shadow: 0 5px 10px rgba(71, 61, 139, 0.2);
+}
+.btn-10:hover::before {
+    background-color: rgba(71, 61, 139, 0.6);
+    transform: scale(1.5);
+    opacity: 0;
+}
+.btn-10::after {
+    display: none;
+}
+
+
 
 button.rotate:hover{
     color: white;
