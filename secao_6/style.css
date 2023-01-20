@@ -227,3 +227,66 @@ ul li a {
 .menu-6 a:hover::after {
     transform: scale(1);
 }
+
+
+
+.menu-7 span:first-child::before, .menu-7 span:first-child::after {
+    content: '';
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    background: transparent;
+    border: 2px solid black;
+    transition: all .5s;
+    opacity: 0;
+}
+.menu-7 span:first-child::before {
+    top: 0;
+    left: 0;
+    border-width: 2px 0 0 2px;
+}
+.menu-7 span:first-child::after {
+    bottom: 0;
+    left: 0;
+    border-width: 0 0 2px 2px;
+}
+.menu-7 span:last-child::before, .menu-7 span:last-child::after {
+    content: '';
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    background: transparent;
+    border: 2px solid black;
+    transition: all .5s;
+    opacity: 0;
+}
+.menu-7 span:last-child::before {
+    top: 0;
+    right: 0;
+    border-width: 2px 2px 0 0;
+}
+.menu-7 span:last-child::after {
+    bottom: 0;
+    right: 0;
+    border-width: 0 2px 2px 0;
+}
+.menu-7 a:hover span:first-child::before {
+    top: -3px;
+    left: -3px;
+    opacity: 1;
+}
+.menu-7 a:hover span:first-child::after {
+    bottom: -3px;
+    left: -3px;
+    opacity: 1;
+}
+.menu-7 a:hover span:last-child::before {
+    top: -3px;
+    right: -3px;
+    opacity: 1;
+}
+.menu-7 a:hover span:last-child::after {
+    bottom: -3px;
+    right: -3px;
+    opacity: 1;
+}
