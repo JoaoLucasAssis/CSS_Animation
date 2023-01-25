@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    font-size: 2.6rem;
+    margin-bottom: 1.6rem;
+}
+
+p {
+    font-size: 1.4rem;
+    margin-bottom: 1.6rem;
+}
+
+a {
+    font-size: 1.4rem;
+    padding: 0.6rem 0.8rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    color: #000;
+    border: 1px solid #000;
+    transition: all .5s;
+}
+
+img {
+    width: 100%;
+}
+
+.card {
+    width: 25rem;
+    height: 25rem;
+    padding: 2rem 1.5rem;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, .2);
+    position: relative;
+    overflow: hidden;
+    transition: all .5s;
+}
+
+.content {
+    text-transform: capitalize;
+    color: #000;
+    position: relative;
+    transition: all .5s;
+    z-index: 2;
+}
+
+.card-1::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: #8A3388;
+    position: absolute;
+    left: 0;
+    bottom: calc(-100% + 0.5rem);
+    transition: all .5s;
+    z-index: 1;
+}
+
+.card-1:hover::before {
+    bottom: 0;
+}
+
+.card-1:hover .content {
+    color: #fff;
+}
+
+.card-1:hover .content a {
+    border-color: #fff;
+    color: #fff;
+}
+
+.card-2 {
+    overflow: visible;
+}
+
+.card-2 .img-box {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform: translateY(-30%);
+}
+
+.card-2:hover {
+    height: 30rem;
+}
